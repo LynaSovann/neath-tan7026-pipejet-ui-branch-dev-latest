@@ -4,6 +4,9 @@ metadata:
   name: neath-tan7026-pipejet-ui-branch-dev-latest-ingress
   namespace: neath-tan7026-pipejet-ui-branch-dev-latest
   annotation:
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "180"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "180"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "180"
 spec:
   ingressClassName: nginx
   rules:
