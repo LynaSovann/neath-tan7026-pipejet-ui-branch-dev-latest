@@ -3,7 +3,10 @@ kind: Ingress
 metadata:
   name: neath-tan7026-pipejet-ui-branch-dev-latest-ingress
   namespace: neath-tan7026-pipejet-ui-branch-dev-latest
-  annotation:
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "180"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "180"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "180"
